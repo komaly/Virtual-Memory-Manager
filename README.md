@@ -1,8 +1,11 @@
 The Virtual Memory Manager is a virtual memory system (VM) that uses segmentation and paging.
 It creates segment and page tables in the physical memory, which is divided into 512 frames, 
 and translates virtual addresses to physical addresses. It uses a Translation Look Aside Buffer 
-(TLB) to increase the efficiency of the translation process. It takes in 2 input files. The first 
-input file contains numbers used to create the segment and page tables in the physical memory. 
+(TLB) to increase the efficiency of the translation process. It also utilizes a bitmap to keep track
+of which frames in the physical memory are free and which are not.
+
+The program takes in 2 input files. The first input file contains numbers used to create the segment 
+and page tables in the physical memory. 
 
 The format of the first input file is:
 
